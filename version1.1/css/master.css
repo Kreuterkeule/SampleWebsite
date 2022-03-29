@@ -1,0 +1,88 @@
+/* Adobe Farben
+#FFC72E
+#D4911E
+#EB8F2D
+#D4621E
+#EC4F1F
+*/
+body {
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.navbar {
+  background-color: #EC4F1F;
+  display: flex;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+}
+.navbar a {
+  display: block;
+  float: left;
+  height: 5vh-(2*1.4vh);
+  text-decoration: none;
+  color: black;
+  padding: 1.4vh;
+}
+.navbar a:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.bar {
+  padding-top: 8vh;
+  padding-bottom: 8vh;
+}
+.bar a {
+  text-decoration: none;
+}
+.element {
+  width: 84%;
+  margin: 0 8% 5vh 8%;
+  height: 30vh;
+  background-color: #EB8F2D;
+  display: flex;
+  border-radius: 10px;
+  transition: .5s;
+  position: relative;
+}
+.element img{
+  width: auto;
+  height: 20vh;
+  margin: 5vh;
+  border-radius: 5px;
+}
+.element p{
+  width: auto;
+  height: 20vh;
+  margin: 5vh;
+  font-size: 20px;
+  color: white;
+  text-align: right;
+}
+.element:hover {
+  transform: scale(1.05);
+}
+.element-secondary {
+  background-color: #D4621E;
+}
+.element-secondary img{
+  position: absolute;
+  right: 0;
+}
+.element-secondary p{
+  position: absolute;
+  left: 0;
+  text-align: left;
+  width: 45%;
+}
+footer {
+  width: 100%;
+  height: 30vh;
+  text-align: center;
+  background-color: #222;
+  color: white;
+}
+footer p{
+  height: 6vh;
+  padding-top: 13vh;
+}
