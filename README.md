@@ -1,3 +1,3 @@
 # SampleWebsite
-just learning
-also see the readme.md files in each version
+- just learning
+- also see the readme.md files in each version
