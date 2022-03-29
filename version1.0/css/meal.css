@@ -1,0 +1,39 @@
+.attribute img {
+  height: 60px;
+  width: 60px;
+}
+.meal {
+  width: 84%;
+  margin: 0 8% 5vh 8%;
+  height: 30vh;
+  background-color: #EB8F2D;
+  display: flex;
+  border-radius: 10px;
+  transition: .5s;
+  position: relative;
+}
+.meal:hover {
+  transform: scale(1.05);
+}
+.meal h1 {
+  margin: 16px 16px 16px 32px;
+}
+.attributes {
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 16px 32px 16px 16px;
+  padding: 0px;
+  width: 140px;
+  height: 140px
+  display: flex;
+  align-items: right;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+.attribute {
+  margin:  8px 4px;
+  float: right;
+  display: block;
+}
