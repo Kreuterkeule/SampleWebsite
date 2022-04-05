@@ -5,6 +5,9 @@
 #D4621E
 #EC4F1F
 */
+#health-disclaimer {
+  height: 15vh;
+}
 body {
   margin: 0;
   background-color: rgba(0, 0, 0, 0.05);

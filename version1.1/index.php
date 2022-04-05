@@ -35,6 +35,23 @@
     }
     ?>
     <div class="bar">
+      <!-- SECOND BOX OPTION -->
+      <?php
+      if ($_GET['lang'] == 'eng') {
+        echo "<a href='#'><div id='health-disclaimer' class='element element-secondary'>";
+      } else if ($_GET['lang'] == 'de') {
+        echo "<a href='#'><div id='health-disclaimer' class='element element-secondary'>";
+      }
+       ?>
+       <?php
+         if ($_GET['lang'] == 'eng') {
+           echo "<p>Because we care about our customers health, every meal has official health attributes.</p>";
+         } else {
+           echo "<p>Weil wir wert auf die Gesundheit unserer Kunden legen, hat jedes unserer Gerichte offizielle Kenzeichen.</p>";
+         }
+        ?>
+      </div>
+      </a>
       <!-- FIRST BOX OPTION -->
       <?php
       if ($_GET['lang'] == 'eng') {
