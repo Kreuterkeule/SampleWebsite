@@ -1,0 +1,58 @@
+.attribute img {
+  height: 100x;
+  width: 100px;
+}
+.meal {
+  width: 84%;
+  margin: 0 8% 5vh 8%;
+  height: 45vh;
+  background-color: #EB8F2D;
+  display: flex;
+  border-radius: 10px;
+  transition: .5s;
+  position: relative;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+}
+.meal:hover {
+  transform: scale(1.05);
+}
+.attributes {
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 16px 32px 16px 16px;
+  padding: 0px;
+  width: 220px;
+  height: 220px
+  display: flex;
+  align-items: right;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+.attribute {
+  margin:  8px 4px;
+  width: 100px;
+  height: 100px;
+  float: right;
+  display: block;
+}
+.secondary-meal {
+  background-color: #D4621E;
+}
+.meal-text {
+  margin-left: 32px;
+  width: 20vw;
+}
+.meal-img img{
+  width: auto;
+  height: 20vw;
+  border-radius: 5px;
+
+}
+.meal-img {
+  position: absolute;
+  right: 250px;
+  top: 0;
+  margin: 16px 32px;
+}
