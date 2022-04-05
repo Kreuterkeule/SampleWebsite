@@ -3,10 +3,15 @@
   <head>
     <meta charset="utf-8">
     <title>Food</title>
+    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/master.css">
   </head>
   <body>
-
+    <?php
+    if (!isset($_GET['lang'])) {
+      echo "Oops the language isn't set. <a href='?lang=eng'>Set it to default(englisch) now...</a>";
+    }
+     ?>
     <?php
     $lang = 'de';
     if ($_GET['lang']=='de') {
@@ -38,18 +43,35 @@
       <!-- SECOND BOX OPTION -->
       <?php
       if ($_GET['lang'] == 'eng') {
-        echo "<a href='#'><div id='health-disclaimer' class='element element-secondary'>";
+        echo "<a href='#'><div id='health-disclaimer' class='element'>";
       } else if ($_GET['lang'] == 'de') {
-        echo "<a href='#'><div id='health-disclaimer' class='element element-secondary'>";
+        echo "<a href='#'><div id='health-disclaimer' class='element'>";
       }
        ?>
        <?php
          if ($_GET['lang'] == 'eng') {
            echo "<p>Because we care about our customers health, every meal has official health attributes.</p>";
          } else {
-           echo "<p>Weil wir wert auf die Gesundheit unserer Kunden legen, hat jedes unserer Gerichte offizielle Kenzeichen.</p>";
+           echo "<p>Weil wir wert auf die Gesundheit unserer Kunden legen, hat jedes unserer Gerichte offizielle Gesundheitskenzeichen.</p>";
          }
         ?>
+      </div>
+      </a>
+      <!-- FIRST BOX OPTION -->
+        <?php
+        if ($_GET['lang'] == 'eng') {
+          echo "<a href='#'><div class='element element-secondary specials'>";
+        } else if ($_GET['lang'] == 'de') {
+          echo "<a href='#'><div class='element element-secondary specials'>";
+        }
+         ?>
+         <?php
+           if ($_GET['lang'] == 'eng') {
+             echo "<p>Our specialites</p>";
+           } else {
+             echo "<p>Unsere spezialitaeten</p>";
+           }
+          ?>
       </div>
       </a>
       <!-- FIRST BOX OPTION -->
@@ -60,7 +82,7 @@
         echo "<a href='./sites/lunch.php?lang=de#meal0'><div class='element'>";
       }
        ?>
-        <img src="img/food.jpg" alt="">
+        <img loading="lazy" src="img/food.jpg" alt="">
         <?php
           if ($_GET['lang'] == 'eng') {
             echo "<p>sample text</p>";
@@ -69,8 +91,8 @@
           }
          ?>
       </div>
-      <!-- SECOND BOX OPTION -->
       </a>
+      <!-- SECOND BOX OPTION -->
       <?php
       if ($_GET['lang'] == 'eng') {
         echo "<a href='./sites/lunch.php?lang=eng#meal1'><div class='element element-secondary'>";
@@ -85,7 +107,7 @@
            echo "<p>text zum austauschen</p>";
          }
         ?>
-        <img src="img/food.jpg" alt="">
+        <img loading="lazy" src="img/food.jpg" alt="">
       </div>
       </a>
     </div>
