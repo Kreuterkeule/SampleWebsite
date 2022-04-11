@@ -8,13 +8,17 @@
   </head>
   <body>
     <?php
-    if (!isset($_GET['lang'])) {
-      echo "Oops the language isn't set. <a href='?lang=eng'>Set it to default(englisch) now...</a>";
+    $lang = $_GET['lang'];
+//    if ($_GET['lang'] == 'de') {
+//      $lang = 'de';
+//    }    if ($_GET['lang'] == 'eng') {
+//      $lang = 'eng';
+//    }
+    if (!isset($lang)) {
+//      echo "Oops the \$_GET variable language isn't set. <a href='?lang=eng'>Set it to default(englisch) now...</a>";
+      $lang = 'eng';
     }
-     ?>
-    <?php
-    $lang = 'de';
-    if ($_GET['lang']=='de') {
+    if ($lang=='de') {
       echo "
       <div class='navbar'>
         <a href='./index.php?lang=$lang'>Home</a>
@@ -26,7 +30,7 @@
       </div>
       ";
     }
-    if ($_GET['lang']=='eng') {
+    if ($lang=='eng') {
       echo "
       <div class='navbar'>
         <a href='./index.php?lang=$lang'>Home</a>
@@ -42,14 +46,14 @@
     <div class="bar">
       <!-- SECOND BOX OPTION -->
       <?php
-      if ($_GET['lang'] == 'eng') {
+      if ($lang == 'eng') {
         echo "<a href='#'><div id='health-disclaimer' class='element'>";
-      } else if ($_GET['lang'] == 'de') {
+      } else if ($lang == 'de') {
         echo "<a href='#'><div id='health-disclaimer' class='element'>";
       }
        ?>
        <?php
-         if ($_GET['lang'] == 'eng') {
+         if ($lang == 'eng') {
            echo "<p>Because we care about our customers health, every meal has official health attributes.</p>";
          } else {
            echo "<p>Weil wir wert auf die Gesundheit unserer Kunden legen, hat jedes unserer Gerichte offizielle Gesundheitskenzeichen.</p>";
@@ -59,14 +63,14 @@
       </a>
       <!-- FIRST BOX OPTION -->
         <?php
-        if ($_GET['lang'] == 'eng') {
+        if ($lang == 'eng') {
           echo "<a href='#'><div class='element element-secondary specials'>";
-        } else if ($_GET['lang'] == 'de') {
+        } else if ($lang == 'de') {
           echo "<a href='#'><div class='element element-secondary specials'>";
         }
          ?>
          <?php
-           if ($_GET['lang'] == 'eng') {
+           if ($lang == 'eng') {
              echo "<p>Our specialites</p>";
            } else {
              echo "<p>Unsere spezialitaeten</p>";
@@ -76,16 +80,16 @@
       </a>
       <!-- FIRST BOX OPTION -->
       <?php
-      if ($_GET['lang'] == 'eng') {
+      if ($lang == 'eng') {
         echo "<a href='./sites/lunch.php?lang=eng#meal0'><div class='element'>";
-      } else if ($_GET['lang'] == 'de') {
+      } else if ($lang == 'de') {
         echo "<a href='./sites/lunch.php?lang=de#meal0'><div class='element'>";
       }
        ?>
-        <img loading="lazy" src="img/food.jpg" alt="">
+        <img loading="lazy" src="img/green-tea-noodles-with-sticky-sweet-chilli-salmon.jpg">
         <?php
-          if ($_GET['lang'] == 'eng') {
-            echo "<p>sample text</p>";
+          if ($lang == 'eng') {
+            echo "<p>Green tea noodles with sticky sweet chilli salmon<p>";
           } else {
             echo "<p>text zum austauschen</p>";
           }
@@ -94,20 +98,54 @@
       </a>
       <!-- SECOND BOX OPTION -->
       <?php
-      if ($_GET['lang'] == 'eng') {
-        echo "<a href='./sites/lunch.php?lang=eng#meal1'><div class='element element-secondary'>";
-      } else if ($_GET['lang'] == 'de') {
-        echo "<a href='./sites/lunch.php?lang=de#meal1'><div class='element element-secondary'>";
+      if ($lang == 'eng') {
+        echo "<a href='./sites/lunch.php?lang=eng#meal3'><div class='element element-secondary'>";
+      } else if ($lang == 'de') {
+        echo "<a href='./sites/lunch.php?lang=de#meal3'><div class='element element-secondary'>";
       }
        ?>
        <?php
-         if ($_GET['lang'] == 'eng') {
-           echo "<p>sample text</p>";
+         if ($lang == 'eng') {
+           echo "<p>Silverbeet fatteh with sumac yoghurt and chickpeas</p>";
          } else {
            echo "<p>text zum austauschen</p>";
          }
         ?>
-        <img loading="lazy" src="img/food.jpg" alt="">
+        <img loading="lazy" src="img/silverbeet-fatteh-with-sumac-yoghurt-and-chickpeas.jpg">
+      </div>
+      </a>
+      <?php
+      if ($lang == 'eng') {
+        echo "<a href='./sites/dessert.php?lang=eng#meal1'><div class='element'>";
+      } else if ($lang == 'de') {
+        echo "<a href='./sites/dessert.php?lang=de#meal1'><div class='element'>";
+      }
+       ?>
+        <img loading="lazy" src="img/Matcha-Collagen-Green-Smoothie.jpg" alt="">
+        <?php
+          if ($lang == 'eng') {
+            echo "<p>Green smothie with avocado<p>";
+          } else {
+            echo "<p>text zum austauschen</p>";
+          }
+         ?>
+      </div>
+      </a>
+      <?php
+      if ($lang == 'eng') {
+        echo "<a href='./sites/dessert.php?lang=eng#meal3'><div class='element element-secondary'>";
+      } else if ($lang == 'de') {
+        echo "<a href='./sites/dessert.php?lang=de#meal3'><div class='element element-secondary'>";
+      }
+       ?>
+       <?php
+         if ($lang == 'eng') {
+           echo "<p>Healthy and Gluten free chocolate cookie</p>";
+         } else {
+           echo "<p>text zum austauschen</p>";
+         }
+        ?>
+        <img loading="lazy" src="img/Healthy-Gluten-Free-Chocolate-Chip-Cookies.webp" alt="">
       </div>
       </a>
     </div>

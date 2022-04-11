@@ -8,8 +8,17 @@
   </head>
   <body>
     <?php
-    $lang = 'de';
-    if ($_GET['lang']=='de') {
+    $lang = $_GET['lang'];
+//    if ($_GET['lang'] == 'de') {
+//      $lang = 'de';
+//    }    if ($_GET['lang'] == 'eng') {
+//      $lang = 'eng';
+//    }
+    if (!isset($lang)) {
+//      echo "Oops the \$_GET variable language isn't set. <a href='?lang=eng'>Set it to default(englisch) now...</a>";
+      $lang = 'eng';
+    }
+    if ($lang=='de') {
       echo "
         <div class='navbar'>
           <a href='../index.php?lang=$lang'>Home</a>
@@ -21,7 +30,7 @@
         </div>
       ";
     }
-    if ($_GET['lang']=='eng') {
+    if ($lang=='eng') {
       echo "
         <div class='navbar'>
           <a href='../index.php?lang=$lang'>Home</a>
@@ -37,7 +46,7 @@
     <div class="padding-box"></div>
     <div class="contact-content">
       <?php
-      if ($_GET['lang'] == 'de') {
+      if ($lang == 'de') {
         echo "<h1>Karte<h1>
         <iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14238.611043947682!2d9.994438335111838!3d53.45446131036338!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b1919b83e5e6e1%3A0x504f498e2c17d704!2sDr.%20Mein%20Beispiel!5e0!3m2!1sde!2sde!4v1649160884059!5m2!1sde!2sde'></iframe>
         <h1>Oeffnungszeiten<h1>
@@ -60,7 +69,7 @@
           </div>
         ";
       }
-      if ($_GET['lang'] == 'eng') {
+      if ($lang == 'eng') {
         echo "<h1>Map<h1>
         <iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14238.611043947682!2d9.994438335111838!3d53.45446131036338!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b1919b83e5e6e1%3A0x504f498e2c17d704!2sDr.%20Mein%20Beispiel!5e0!3m2!1sde!2sde!4v1649160884059!5m2!1sde!2sde'></iframe>
         <h1>Opening hours<h1>
@@ -93,7 +102,7 @@
          <br>
        </div>
     </div>
+
     <footer> <p>Moritz Siefke (C) 2022</p> </footer>
-    <script src="../scripts/meal.js"></script>
     </body>
   </html>

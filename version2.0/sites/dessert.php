@@ -8,8 +8,17 @@
   </head>
   <body>
     <?php
-    $lang = 'de';
-    if ($_GET['lang']=='de') {
+    $lang = $_GET['lang'];
+//    if ($_GET['lang'] == 'de') {
+//      $lang = 'de';
+//    }    if ($_GET['lang'] == 'eng') {
+//      $lang = 'eng';
+//    }
+    if (!isset($lang)) {
+//      echo "Oops the \$_GET variable language isn't set. <a href='?lang=eng'>Set it to default(englisch) now...</a>";
+      $lang = 'eng';
+    }
+    if ($lang=='de') {
       echo "
         <div class='navbar'>
           <a href='../index.php?lang=$lang'>Home</a>
@@ -21,7 +30,7 @@
         </div>
       ";
     }
-    if ($_GET['lang']=='eng') {
+    if ($lang=='eng') {
       echo "
         <div class='navbar'>
           <a href='../index.php?lang=$lang'>Home</a>
@@ -39,52 +48,106 @@
     <div id="meal1" class="meal">
       <div class="meal-text">
         <?php
-          if ($_GET['lang'] == 'eng') {
+          if ($lang == 'eng') {
             echo "<h1 class='meal-name'>Heading</h1>";
-          } else if ($_GET['lang'] == 'de') {
+          } else if ($lang == 'de') {
             echo "<h1 class='meal-name'>Ueberschrift</h1>";
           }
          ?>
       <?php
-        if ($_GET['lang'] == 'eng') {
+        if ($lang == 'eng') {
           echo "<p>sample text</p>";
-        } else if ($_GET['lang'] == 'de') {
+        } else if ($lang == 'de') {
           echo "<p>text zum austauschen</p>";
         }
        ?>
      </div>
+     <div class="meal-img">
+       <img src="../img/Healthy-Peanut-Butter-Banana-Muffins.jpg">
+     </div>
       <div class="attributes">
         <span class="attribute"><img title="Vegan" src='../img/vegan.png'></span>
-        <span class="attribute"><img title="Glutenfree" src='../img/gluteenfree.png'></span>
         <span class="attribute"><img title="Low Carb" src='../img/LowCarb.png'></span>
-        <span class="attribute"><img title="Locally produced Ingredience" src='../img/local.png'></span>
-        <span class="attribute"><img title="Hormon free" src='../img/hormonfree.png'></span>
       </div>
     </div>
     <div id="meal2" class="secondary-meal meal">
       <div class="meal-text">
 
       <?php
-        if ($_GET['lang'] == 'eng') {
+        if ($lang == 'eng') {
           echo "<h1 class='meal-name'>Heading</h1>";
-        } else if ($_GET['lang'] == 'de') {
+        } else if ($lang == 'de') {
           echo "<h1 class='meal-name'>Ueberschrift</h1>";
         }
        ?>
        <?php
-         if ($_GET['lang'] == 'eng') {
+         if ($lang == 'eng') {
            echo "<p>sample text</p>";
-         } else if ($_GET['lang'] == 'de') {
+         } else if ($lang == 'de') {
            echo "<p>text zum austauschen</p>";
          }
         ?>
      </div>
        <div class="meal-img">
-         <img src="../img/food.jpg" alt="">
+         <img src="../img/Matcha-Collagen-Green-Smoothie.jpg" alt="">
        </div>
       <div class="attributes">
-        <span class="attribute"><img title="Locally produced Ingredience" src='../img/local.png'></span>
+        <span class="attribute"><img title="Vegan" src='../img/vegan.png'></span>
         <span class="attribute"><img title="Hormon free" src='../img/hormonfree.png'></span>
+
+      </div>
+    </div>
+    <div id="meal3" class="meal">
+      <div class="meal-text">
+        <?php
+          if ($lang == 'eng') {
+            echo "<h1 class='meal-name'>Heading</h1>";
+          } else if ($lang == 'de') {
+            echo "<h1 class='meal-name'>Ueberschrift</h1>";
+          }
+         ?>
+      <?php
+        if ($lang == 'eng') {
+          echo "<p>sample text</p>";
+        } else if ($lang == 'de') {
+          echo "<p>text zum austauschen</p>";
+        }
+       ?>
+     </div>
+     <div class="meal-img">
+       <img src="../img/No-Bake-Cranberry-Orange-Breakfast-Cookies.jpg">
+     </div>
+      <div class="attributes">
+        <span class="attribute"><img title="Vegan" src='../img/vegan.png'></span>
+        <span class="attribute"><img title="Glutenfree" src='../img/gluteenfree.png'></span>
+        <span class="attribute"><img title="Low Carb" src='../img/LowCarb.png'></span>
+      </div>
+    </div>
+    <div id="meal4" class="secondary-meal meal">
+      <div class="meal-text">
+
+      <?php
+        if ($lang == 'eng') {
+          echo "<h1 class='meal-name'>Heading</h1>";
+        } else if ($lang == 'de') {
+          echo "<h1 class='meal-name'>Ueberschrift</h1>";
+        }
+       ?>
+       <?php
+         if ($lang == 'eng') {
+           echo "<p>sample text</p>";
+         } else if ($lang == 'de') {
+           echo "<p>text zum austauschen</p>";
+         }
+        ?>
+     </div>
+       <div class="meal-img">
+         <img src="../img/Healthy-Gluten-Free-Chocolate-Chip-Cookies.webp" alt="">
+       </div>
+      <div class="attributes">
+        <span class="attribute"><img title="Glutenfree" src='../img/gluteenfree.png'></span>
+        <span class="attribute"><img title="Hormon free" src='../img/hormonfree.png'></span>
+        <span class="attribute"><img title="Vegan" src='../img/vegan.png'></span>
       </div>
     </div>
   </div>
