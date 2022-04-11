@@ -5,7 +5,7 @@
 - Install xampp on your machine using this [guide]
 - clone the repository into the /opt/lampp/htdocs directory
 - open a terminal in the /opt/lammp directory and write sudo ./xampp start
-- lastly go to enter localhost/htdocs/<path to file>
+- lastly go to enter localhost/htdocs/\<path to file\>
 - Attention! when on index.php page and there is no menu please set ?lang=de or ?lang=eng
 
 - there was a small problem with a skip mark: they display the content with given id right in top and not in middle of site. I would appreciante it if someone could comment down below how to fix this problem. What I did is a bit lame; I just took the id of the content above.
