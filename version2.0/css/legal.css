@@ -1,0 +1,22 @@
+.legal-content {
+  height: 600px;
+  margin: 0px 80px 20px 80px;
+  width: 100%-120px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 32px;
+}
+.padding-box {
+  padding: 30px
+}
+.legal-content a {
+  color: white;
+  text-decoration: none;
+}
+.iconExpression img {
+  width: 100px;
+  height: 100px;
+}
+.higher-legal-content {
+  height: 900px;
+}
